@@ -6,10 +6,15 @@
     font-family: "Be Vietnam Pro", sans-serif;
     scroll-behavior: smooth;
 }
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 #wrapper{
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
+    width: 100%;
 }
 .container{
     width: 100%;
@@ -23,6 +28,7 @@
     align-items: center;
     padding-top: 1rem;
     position: relative;
+    width: 100%;
 }
 .logo{
     width: 80px;
@@ -31,6 +37,7 @@
     display: flex;
     justify-content: baseline;
     align-items: center;
+    z-index: 10;
 }
 .logo-text{
     margin-left: -1.2rem;
@@ -48,6 +55,8 @@
 }
 .nav-items div a{
     color: black;
+    display: block;
+    padding: 10px 0;
 }
 a{
     text-decoration: none;
@@ -57,8 +66,11 @@ a{
     font-weight: bold;
 }
 
+/* CSS-only hamburger menu */
 .nav-toggle {
     display: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .nav-toggle-label {
@@ -66,7 +78,10 @@ a{
     cursor: pointer;
     position: absolute;
     right: 20px;
-    z-index: 100;
+    top: 20px;
+    z-index: 1000;
+    width: 35px;
+    height: 30px;
 }
 
 .nav-toggle-label span {
@@ -76,6 +91,7 @@ a{
     background-color: #333;
     margin: 5px 0;
     transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .hero-section{
@@ -136,6 +152,10 @@ a{
     position: relative;
     z-index: 1;
 }
+.btn-pink a {
+    color: white;
+    text-decoration: none;
+}
 .btn-pink::before{
     content: "";
     position: absolute;
@@ -156,6 +176,9 @@ a{
     border: solid 3px orangered;
     color: black;
 }
+.btn-pink:hover a {
+    color: black;
+}
 #btn-bottom{
     display: none;
 }
@@ -170,10 +193,13 @@ a{
 }
 .user-image img{
     padding: 10px;
-    margin: 20px;
-    height: 400px;
+    margin: 10px;
+    padding-right: 25px;
+    height: 300px;
     width: 400px;
     z-index: -4;
+    max-width: 100%;
+    object-fit: cover;
 }
 @keyframes scaleImage{
     0%{
@@ -194,6 +220,7 @@ a{
 .project-section{
     background-color: rgb(231, 231, 231);
     margin-top: 4rem;
+    width: 100%;
 }
 .page-header{
     color: orangered;
@@ -205,7 +232,6 @@ a{
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 0;
-
     display: flex;
     flex-direction: column;
     gap: 120px;
@@ -465,6 +491,7 @@ a{
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 99;
         transition: right 0.3s ease;
+        -webkit-transition: right 0.3s ease;
     }
     
     .nav-toggle:checked ~ .nav-items {
@@ -473,6 +500,7 @@ a{
     
     .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
+        -webkit-transform: rotate(45deg) translate(5px, 5px);
     }
     
     .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
@@ -481,6 +509,7 @@ a{
     
     .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+        -webkit-transform: rotate(-45deg) translate(7px, -6px);
     }
     
     .page-header {
@@ -597,6 +626,71 @@ a{
     
     #submit-btn {
         font-size: 1.2rem;
+    }
+    
+    footer {
+        padding: 2rem;
+    }
+}
+
+/* Additional mobile-specific fixes */
+@media (max-width: 400px) {
+    .logo {
+        width: 60px;
+    }
+    
+    .logo-text {
+        font-size: 22px;
+    }
+    
+    .hero-section {
+        margin: 2rem auto;
+        padding-bottom: 4rem;
+    }
+    
+    .user-image img {
+        height: 180px;
+        width: 180px;
+        margin: 5px;
+    }
+    
+    .project-card {
+        height: 250px;
+    }
+    
+    .project-content {
+        scale: 0.4;
+    }
+    
+    .project-heading {
+        font-size: 36px;
+    }
+    
+    .skill-heading {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    
+    .caps {
+        font-size: 50px;
+    }
+    
+    .skills-container {
+        padding: 1rem;
+        margin: 3rem auto;
+    }
+    
+    .contactus-heading {
+        font-size: 2em;
+    }
+    
+    .contactus-sub-heading {
+        font-size: 1.2em;
+    }
+    
+    .form {
+        width: 95%;
+        margin: 1rem auto;
     }
 }
 
