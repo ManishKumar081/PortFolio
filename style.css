@@ -424,7 +424,7 @@ a{
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px){
     .hero-section {
         flex-direction: column;
         gap: 2rem;
@@ -466,10 +466,32 @@ a{
         width: 100%;
     }
     
+    .skill-container-left {
+        align-items: center;
+    }
+    
+    .skill-subHeading {
+        width: 100%;
+        text-align: center;
+    }
+    
     .skill-fade-text {
         font-size: 10em;
         bottom: -20%;
         right: 0;
+    }
+    
+    .form {
+        width: 90%;
+        margin: 2rem auto;
+    }
+    
+    footer {
+        padding: 3rem 2rem;
+    }
+    
+    .footer-faded-text {
+        font-size: 4em;
     }
 }
 
@@ -536,30 +558,72 @@ a{
         width: 250px;
     }
     
+    /* Enhanced skills section responsiveness */
+    .skills-container {
+        padding: 1.5rem;
+        margin: 3rem auto;
+    }
+    
+    .skill-heading {
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .skill-fade-text {
+        font-size: 7em;
+        opacity: 0.3;
+        bottom: -15%;
+    }
+    
+    .skill-container-right {
+        justify-content: center;
+    }
+    
+    .skills-logo {
+        width: 70px;
+        margin: 0.5rem;
+    }
+    
+    /* Enhanced contact section responsiveness */
     .contactus-heading {
         font-size: 3em;
+        text-align: center;
     }
     
     .contactus-sub-heading {
         font-size: 2em;
+        text-align: center;
     }
     
     .form {
         width: 90%;
         margin: 2rem auto;
+        padding: 0;
+    }
+    
+    .formfield {
+        margin-top: 15px;
+    }
+    
+    /* Enhanced footer responsiveness */
+    footer {
+        padding: 3rem 1.5rem;
     }
     
     .footer-faded-text {
         font-size: 3em;
+        opacity: 0.5;
     }
     
     .footer-wrapper {
         flex-direction: column;
         gap: 2rem;
+        text-align: center;
     }
     
     .link-wrapper {
         justify-content: center;
+        gap: 1.5rem;
     }
     
     .icon-wrapper {
@@ -593,14 +657,17 @@ a{
         bottom: 0;
     }
     
-    .skill-fade-text {
-        font-size: 5em;
-        bottom: -10%;
+    /* Enhanced skills section responsiveness */
+    .skills-container {
+        padding: 1rem;
+        margin: 2rem auto;
+        gap: 1.5rem;
     }
     
     .skill-heading {
         font-size: 36px;
         line-height: 36px;
+        text-align: center;
     }
     
     .caps {
@@ -609,31 +676,78 @@ a{
     
     .skills-logo {
         width: 60px;
+        margin: 0.5rem;
     }
     
+    .skill-fade-text {
+        font-size: 5em;
+        bottom: -10%;
+        opacity: 0.2;
+        right: 0;
+    }
+    
+    .skill-subHeading {
+        text-align: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    /* Enhanced contact section responsiveness */
     .contactus-heading {
         font-size: 2.5em;
+        padding-top: 1.5rem;
     }
     
     .contactus-sub-heading {
         font-size: 1.5em;
+        padding: 0 1rem;
     }
     
     .formfield {
         font-size: 16px;
         padding: 0 1rem;
+        height: 38px;
+    }
+    
+    .formfield-textarea {
+        height: auto;
     }
     
     #submit-btn {
         font-size: 1.2rem;
     }
     
+    /* Enhanced footer responsiveness */
     footer {
-        padding: 2rem;
+        padding: 2rem 1rem;
+    }
+    
+    .footer-faded-text {
+        font-size: 2.5em;
+        opacity: 0.3;
+    }
+    
+    .link-wrapper {
+        gap: 1rem;
+    }
+    
+    .link-wrapper div {
+        margin: 0.5rem;
+    }
+    
+    .icon-wrapper {
+        gap: 1rem;
+    }
+    
+    .icon-wrapper a {
+        margin: 0.5rem;
+    }
+    
+    .icon {
+        font-size: 28px;
     }
 }
 
-/* Additional mobile-specific fixes */
 @media (max-width: 400px) {
     .logo {
         width: 60px;
@@ -666,6 +780,7 @@ a{
         font-size: 36px;
     }
     
+    /* Enhanced skills section responsiveness */
     .skill-heading {
         font-size: 30px;
         line-height: 32px;
@@ -675,11 +790,16 @@ a{
         font-size: 50px;
     }
     
-    .skills-container {
-        padding: 1rem;
-        margin: 3rem auto;
+    .skills-logo {
+        width: 50px;
+        margin: 0.5rem;
     }
     
+    .skill-container-right {
+        gap: 1rem;
+    }
+    
+    /* Enhanced contact section responsiveness */
     .contactus-heading {
         font-size: 2em;
     }
@@ -691,6 +811,44 @@ a{
     .form {
         width: 95%;
         margin: 1rem auto;
+        gap: 15px;
+    }
+    
+    .formfield {
+        margin-top: 10px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .formfield-textarea {
+        min-height: 100px;
+    }
+    
+    #submit-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+    
+    .submit-icon {
+        font-size: 1.2rem;
+    }
+    
+    /* Enhanced footer responsiveness */
+    footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer-faded-text {
+        font-size: 2em;
+        opacity: 0.3;
+    }
+    
+    .link-wrapper div a {
+        font-size: 16px;
+    }
+    
+    .icon {
+        font-size: 24px;
     }
 }
 
@@ -818,6 +976,7 @@ footer{
     padding: 1.2rem;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .footer-faded-text{
     position: absolute;
@@ -826,10 +985,14 @@ footer{
     color: #535c87;
     user-select: none;
     font-size: 5em;
+    z-index: 0;
 }
 .link-wrapper{
     display: flex;
     gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
 }
 .link-wrapper div a{
     color: white;
@@ -842,4 +1005,7 @@ footer{
 .icon-wrapper{
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
 }
